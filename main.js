@@ -11,12 +11,31 @@ function calcular(event){
     const operador = operacao[0];
 
     const calcular = new Calcular();
-    calcular.add(num1);
-    calcular.add(num2);
+    calcular.adicionar(num1);
+    
+    let result;
+    switch(operador){
+        case '+':
+            result = calcular.adicionar(num2);
+            break;
+        case '-':
+            result = calcular.subtrair(num2);
+            break;
+        case '*':
+            result = calcular.multiplicar(num2);
+            break;
+        case '/':
+            result = calcular.dividir(num2);
+            break;
+    }
+    updateResult(result);
+}
 
-    console.log(calcular.total);  
-
-    //console.log(num1+num2);
+function updateResult(result){
+    let element = document.getElementById('result');
+    if(element){
+        element.innerText = result;
+    }
 }
 
 document.getElementById('inputValue').addEventListener('change', calcular);

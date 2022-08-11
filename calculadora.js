@@ -1,5 +1,5 @@
 function Calcular() {
-    this.total = 1;
+    this.total = 0;
 }
 
 Calcular.prototype.adicionar = function (num) {
