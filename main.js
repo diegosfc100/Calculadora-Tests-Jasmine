@@ -8,6 +8,10 @@ function calcular(event){
     const num2 = +nums[1];
 
     const operacao = inputValue.match(expressao);
+    if(isNaN(num1) || isNaN(num2) || operacao == null){
+        updateResult('Operação não reconhecida');
+        return;
+    }
     const operador = operacao[0];
 
     const calcular = new Calcular();
