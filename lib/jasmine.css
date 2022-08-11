@@ -156,7 +156,7 @@ body {
   background-color: #007069;
 }
 .jasmine_html-reporter .jasmine-bar.jasmine-incomplete {
-  background-color: #bababa;
+  background-color: #000000;
 }
 .jasmine_html-reporter .jasmine-bar.jasmine-skipped {
   background-color: #bababa;

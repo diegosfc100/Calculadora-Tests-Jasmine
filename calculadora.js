@@ -15,8 +15,9 @@ Calcular.prototype.multiplicar = function (num) {
 }
 
 Calcular.prototype.dividir = function (num) {
-    if(num == 0){
+    if(num === 0){
         throw new Error('Num não pode ser 0');
     }
     return (this.total /= num);
-}
+};
+
