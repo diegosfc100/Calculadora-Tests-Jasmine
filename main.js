@@ -1,4 +1,4 @@
-function calcular(event){
+function Calcular(event){
     const inputValue = event.target.value;
     const expressao = /\+|\-|\*|\//;
 

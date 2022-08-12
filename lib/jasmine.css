@@ -194,6 +194,7 @@ body {
 .jasmine_html-reporter .jasmine-summary ul {
   list-style-type: none;
   margin-left: 14px;
+  line-height: 20px;
   padding-top: 0;
   padding-left: 0;
 }
