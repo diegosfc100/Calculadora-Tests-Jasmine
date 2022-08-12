@@ -4,6 +4,7 @@ describe('Calcular.js', () => {
         const calc = new Calcular();        
         calc.adicionar(5);
         expect(calc.total).toBe(5);
+        // toBe verifica não só se os dois valores são iguais, mas também se eles são do mesmo objeto. Ex: ===
     });
 
     it('deve subtrair um numero do total', () => {
@@ -28,6 +29,16 @@ describe('Calcular.js', () => {
     });
 
     xit('exemplo de teste desativado', () => {
-        
+
     })
+
+    it('deve testar toEqual Matcher', () => {
+        const calc1 = new Calcular();
+        const calc2 = new Calcular();
+
+        expect(calc1).toEqual(calc2);
+        // toEqual verifica se duas coisas são iguais (e não necessariamente o mesmo objeto).
+    })
+
+    
 });
