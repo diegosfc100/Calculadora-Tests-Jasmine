@@ -32,7 +32,7 @@ describe('Calcular.js', () => {
 
     })
 
-    it('deve testar toEqual Matcher', () => {
+    it('deve testar toEqual', () => {
         const calc1 = new Calcular();
         const calc2 = new Calcular();
 
@@ -40,5 +40,27 @@ describe('Calcular.js', () => {
         // toEqual verifica se duas coisas são iguais (e não necessariamente o mesmo objeto).
     })
 
+    it('deve testar ToBeTruty', () => {
+        const calc = new Calcular(); // Calcular({ total: 0 })
+        
+        expect(calc).toBeTruthy();        
+    })
+    // Todos os valores são truthy a menos que eles sejam definidos como Falsy.
+
+    it('deve testar ToBeFalsy', () => {
+        const calc = new Calcular(); // calc.valor = 0 (false)
+                
+        expect(calc.total).toBeFalsy();
+        expect(calc.total).toEqual(0);
+        // Falsy = false, 0, "", null, undefined, e NaN.
+    })
+
     
+
+
+
+
+    // Todos os valores são truthy a menos que eles sejam definidos como falsy (ou seja., exceto para false, 0, "", null, undefined, e NaN).
+
+
 });
