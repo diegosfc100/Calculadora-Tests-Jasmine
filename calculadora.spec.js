@@ -26,4 +26,8 @@ describe('Calcular.js', () => {
         calc.dividir(5);
         expect(calc.total).toBe(10);
     });
+
+    xit('exemplo de teste desativado', () => {
+        
+    })
 });
