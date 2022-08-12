@@ -55,7 +55,25 @@ describe('Calcular.js', () => {
         // Falsy = false, 0, "", null, undefined, e NaN.
     })
 
+    it('deve testar not.toBe', () => {
+        const calc1 = new Calcular();
+        const calc2 = new Calcular();
+
+        expect(calc1).not.toBe(calc2);
+        // not é usado inverter um matcher pra termos certeza de que ele não é um valor true.
+    })
+
+    it('deve testar toBeUndefined e toBeDefined', () => {
+        const calc = new Calcular();
+
+        expect(calc.adicionar).toBeDefined(); // Definido
+        expect(calc.subtrair).toBeDefined();
+        expect(calc.multiplicar).not.toBeUndefined(); // not.Indefinido = Definido
+        expec(calc.dividir).not.toBeUndefined();
+    })
+
     
+
 
 
 
